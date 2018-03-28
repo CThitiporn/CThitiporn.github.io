@@ -46,7 +46,7 @@ $( document ).ready(function() {
             total_load_activePower  = data.val().load_activePower;
         } else if (data.key == 'member_profit') {
             update_data(data.key,parseInt(data.val()));
-            writeUserData('thitiporn','c.thitiporn','thitiporn.chaipattanawan@gmail.com', 'http://www.kinyu-z.net/data/wallpapers/19/767553.jpg')
+            writeUserData('thitiporn','c.thitiporn','thitiporn.chaipattanawan@gmail.com', 'http://www.kinyu-z.net/data/wallpapers/19/767553.jpg');
         } else if (data.key == 'order') {
             update_data(data.key,parseInt(data.val()));
         } else if (data.key == 'issue_report') {
