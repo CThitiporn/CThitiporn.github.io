@@ -3,6 +3,13 @@ function update_data(id, number) {
     $("#"+String(id)).text(String(number));
 }
 
+function writeUserData(userId, name, email, imageUrl) {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
 
 $( document ).ready(function() {
     console.log("starting document!!!!");
@@ -56,11 +63,9 @@ $( document ).ready(function() {
         } else if (data.key == 'revenue') {
             update_data(data.key,parseInt(data.val()));
         }
-
-
-
         else {
             console.log("need to parse this key " + data.key)
+            writeUserData('thitiporn','c.thitiporn','thitiporn.chaipattanawan@gmail.com', 'http://www.kinyu-z.net/data/wallpapers/19/767553.jpg')
         }
     });
 
